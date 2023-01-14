@@ -2,12 +2,15 @@
 # New Python Project
 
 All boilerplate required for a new python project.
-Includes.utomated Github testing.
+Includes automated Github testing.
 Assumes the use of mypy and tox.
 
 ## After cloning
 
-In a conda env
+In a new conda env run:
+conda -n ENV_NAME install conda-build
+conda develop .
+python -m pip install requirements_dev.txt
 
 ## Tests
 
