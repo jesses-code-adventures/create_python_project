@@ -5,3 +5,4 @@ __pycache__/
 .vscode/
 .env
 secrets.json
+.DS_Store

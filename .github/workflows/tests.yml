@@ -12,15 +12,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Make secrets folder
-      run: mkdir secrets
     - name: Create secrets file
       id: create-json
       uses: jsdaniell/create-json@1.1.2
       with:
         name: "secrets.json"
-        json: ${{ secrets.ALL_SECRETS }}
+        json: ${{ secrets.SECRETS_FILE }}
         dir: '/'
+    - name: Create env file
+      run: |
+        echo "${{ secrets.ENV_FILE}}"
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:

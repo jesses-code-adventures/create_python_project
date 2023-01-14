@@ -26,12 +26,14 @@ Dev requirements are listed in requirements_dev.txt.
 ## Env
 
 Environment variables stored in .env.
-Format is VARIABLE_NAME=VALUE
+Format is VARIABLE_NAME=VALUE.
+When you update this file, copy the entire thing into the github secret ENV_FILE.
 
 ## Secrets
 
 Service specific configs should be stored in secrets.json.
 Format is {"Service 1": {"var1": "val"}, "Service 2" : ...}
+When you update this file, copy the entire thing into the github secret SECRETS_FILE.
 
 ## Setup.py
 
@@ -39,9 +41,14 @@ Leave as is.
 
 ## Setup.cfg
 
+### Metadata
+
+Edit the project's metadata here.
+
 ### Options/packages
 
 Should contain a list of the packages in the src directory.
+Defaults to basics, connections, procedures.
 
 ### [options.package_data]
 
